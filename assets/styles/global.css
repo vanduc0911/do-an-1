@@ -1,0 +1,67 @@
+.styled-scrollbars {
+    /* Foreground, Background */
+    scrollbar-color: #999 #333;
+}
+
+.styled-scrollbars::-webkit-scrollbar {
+    width: 5px;
+    /* Mostly for vertical scrollbars */
+    height: 5px; 
+    display: block;
+}
+
+.styled-scrollbars::-webkit-scrollbar-thumb {
+    /* Foreground */
+    background: #99999942;
+    border-radius: 5px;
+}
+
+.styled-scrollbars::-webkit-scrollbar-track {
+    /* Background */
+    background: transparent;
+}
+
+.dialog-rebound {
+    animation: rebound 0.43s ease  !important;
+}
+
+.unrebound {
+    animation: unrebound 0.15s ease forwards !important;
+}
+
+@keyframes unrebound {
+    0% {
+        transform: scale(1);
+    }
+
+    /* 40% {
+        transform: scale(1.02);
+    }
+
+    80% {
+        transform: scale(0.981);
+    } */
+
+    100% {
+        transform: scale(0.82);
+        opacity: 0;
+    }
+}
+
+@keyframes rebound {
+    0% {
+        transform: scale(0.82);
+    }
+
+    40% {
+        transform: scale(1.02);
+    }
+
+    80% {
+        transform: scale(0.981);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
